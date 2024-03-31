@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 
 import "./globals.css";
+import Menu from "@/components/Menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, "bg-white rounded-md")}>
+      <body className={clsx(inter.className, "h-screen ")}>
         <Navbar />
-        {children}
+        <section className="grid grid-flow-col grid-cols-[auto,_1fr] h-full ">
+          <Menu />
+          <main className="bg-white h-full w-full py-10 px-2 overflow-y-auto">
+            {children}
+          </main>
+        </section>
       </body>
     </html>
   );
