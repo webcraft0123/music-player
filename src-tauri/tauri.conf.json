@@ -25,6 +25,7 @@
         "startDragging": true
       }
     },
+    "macOSPrivateApi": true,
     "bundle": {
       "active": true,
       "category": "DeveloperTool",
@@ -69,9 +70,7 @@
         "width": 1280,
         "height": 720,
         "title": "music-player",
-        "resizable": true,
         "transparent": true,
-        "fullscreen": false,
         "decorations": false
       }
     ]
