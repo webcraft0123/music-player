@@ -25,7 +25,7 @@ export default function RootLayout({
         <Navbar />
         <section className="grid grid-flow-col grid-cols-[auto,_1fr] h-full ">
           <Menu />
-          <main className="bg-white h-full w-full py-10 px-2 overflow-y-auto">
+          <main className="bg-white h-full w-full py-10 px-6 overflow-y-auto">
             {children}
           </main>
         </section>
