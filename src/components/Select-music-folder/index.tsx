@@ -12,7 +12,10 @@ export default function SelectMusicFolder() {
 
   const debounceSavePath = useCallback(
     debounce(musicFolderPath => {
-      localStorage.setItem("musicFolderPath", musicFolderPath);
+      localStorage.setItem(
+        process.env.NEXT_PUBLIC_MUSIC_STORAGE_NAME!,
+        musicFolderPath
+      );
     }, 1000),
     []
   );
@@ -21,7 +24,9 @@ export default function SelectMusicFolder() {
     if (musicFolderPath !== "") {
       debounceSavePath(musicFolderPath);
     } else {
-      setMusicFolderPath(localStorage.getItem("musicFolderPath") || "");
+      setMusicFolderPath(
+        localStorage.getItem(process.env.NEXT_PUBLIC_MUSIC_STORAGE_NAME!) || ""
+      );
     }
   }, [musicFolderPath]);
 
